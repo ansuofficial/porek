@@ -175,7 +175,7 @@ h5 {
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -304,7 +304,7 @@ body.nav-expanded .offwrap {
 
 a {
     color: #106eea;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     text-decoration: none !important;
     outline: none !important;
 }
@@ -339,7 +339,7 @@ ul {
 }
 
 .bg1 {
-    background: url(assets/images/bg/testimonial-bg.png);
+    background: url(assets/images/bg/);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

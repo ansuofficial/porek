@@ -45,6 +45,10 @@
     display: none;
 }
 
+.working-hours {
+    display: flex;
+}
+
 .mfp-content {
     position: relative;
     display: inline-block;
