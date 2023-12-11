@@ -1,0 +1,9 @@
+
+.h-c ul{
+    border: 2px solid rgb(255, 230, 8);
+    color: white;
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
