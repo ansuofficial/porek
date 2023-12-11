@@ -1,8 +1,8 @@
 
 .h-c ul {
-    border: 2px solid rgb(255, 230, 8);
-    color: white;
     background: blue;
+    box-shadow: 2px 2px 2px solid gray;
+    color: white;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 7%;
