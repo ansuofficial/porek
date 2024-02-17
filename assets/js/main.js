@@ -456,10 +456,3 @@
 
 })(jQuery);
 
-
-wa = document.querySelector(".working-hours");
-
-const showwa = () => {
-    wa.style.display="none"
-}
-window.addEventListener('scroll', () => showwa())

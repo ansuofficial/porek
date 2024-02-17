@@ -67,7 +67,7 @@
                             <li>infoporek@gmail.com</li>
                             <li>+220 288 6605</li>
                             <li>Kerr Serign, West Coast Region, The Gambia.</li>
-                            <li>Working hours: 8:00<sub>am</sub> to 6:00 <sub>pm</sub></li>
+                            <li class=".working-hours">Working hours: 8:00<sub>am</sub> to 6:00 <sub>pm</sub></li>
                         </ul>
                     </div>
                 </div>
@@ -117,11 +117,7 @@
                             <div class="cell-col">
                                 <div class="expand-btn-inner search-icon hidden-md">
                                     <ul>    
-                                        <!-- <li class="sidebarmenu-search">
-                                            <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#">
-                                                    <i class="flaticon-search"></i>
-                                                </a>
-                                        </li> -->
+                                      
                                         <li>
                                             <a id="nav-expander" class="humburger nav-expander" href="#">
                                                     <span class="dot1"></span>
@@ -187,7 +183,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                        <div class="wow fadeInRight d-flex align-items-center justify-content-center" style="background-image: url('assets/images/banner/style4/Untitled design.png');background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height:100vh; object-fit: cover;">
+                        <div class="wow fadeInRight d-flex align-items-center justify-content-center" style="background-image: url('assets/images/banner/style4/Untitled design.png');background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height:75vh; object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -602,7 +598,7 @@ Porek financial services and bureau dechange headquarter is located at Kerr seri
                         <img src="assets/images/team/style1/staff0.jpeg" alt="">
                     </div>
                     <div class="team-content text-center">
-                        <h3 class="person-name"><a href="single-team.html">Mariama </a></h3>
+                        <h3 class="person-name"><a href="single-team.html">Fatou Ceesay </a></h3>
                         <span class="designation">Teller Staff of the years</span>
                     </div>
                 </div>
@@ -727,8 +723,7 @@ Porek financial services and bureau dechange headquarter is located at Kerr seri
                                 <h2 class="title testi-title">Fill The Form Below</h2>
                             </div>
                             <div id="form-messages"></div>
-                            <form id="contact-form" method="post" action="mailer.php">
-                                <fieldset>
+                            <form id="contact-form">
                                     <div class="row">
                                         <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
                                             <input class="from-control" type="text" id="name" name="name" placeholder="Name">
@@ -739,20 +734,16 @@ Porek financial services and bureau dechange headquarter is located at Kerr seri
                                         <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
                                             <input class="from-control" type="text" id="phone" name="phone" placeholder="Phone Number" >
                                         </div>
-                                        <div class="col-lg-6 mb-30 col-md-6 col-sm-6">
-                                            <input class="from-control" type="text" id="website" name="website" placeholder="Your Website" >
-                                        </div>
-
+                                       
                                         <div class="col-lg-12 mb-30">
                                             <textarea class="from-control" id="message" name="message" placeholder="Your message Here"></textarea>
                                         </div>
                                     </div>
                                     <div class="btn-part">
                                         <div class="form-group mb-0">
-                                            <input class="readon started submit get-ready4" type="submit" value="Submit Now">
+                                            <input id="submit" class="readon started submit get-ready4" type="button" value="Submit Now" onclick="sendEmail()">
                                         </div>
                                     </div>
-                                </fieldset>
                             </form>
                         </div>
                     </div>
@@ -815,7 +806,24 @@ Porek financial services and bureau dechange headquarter is located at Kerr seri
         </div>
     </div>
     <!-- Search Modal End -->
+<!-- service_xp8i5ba","template_gn2hcha -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        const publicKey = "CKpAmfbnAjXkKmrZK";
+        const serviceId = "service_xp8i5ba";
+        const template = "template_gn2hcha";
 
+        emailjs.init(publicKey);
+        
+        function sendEmail() {
+            emailjs.sendForm(serviceId, template, "contact-form")
+                .then(function(response) {
+                    alert("Email sent successfully", response);
+                }, function(error) {
+                    console.log("Email failed to send", error);
+                });
+        }
+    </script>
     <!-- modernizr js -->
     <script src="assets/js/modernizr-2.8.3.min.js"></script>
     <!-- jquery latest version -->
