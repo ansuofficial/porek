@@ -810,7 +810,9 @@ Porek financial services and bureau dechange headquarter is located at Kerr seri
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
 
-        
+        let name = document.querySelector(`#name`)
+        let email = document.querySelector(`#email`)
+        let msg = document.querySelector(`#message`)        
 
         const publicKey = "CKpAmfbnAjXkKmrZK";
         const serviceId = "service_4tl3gj4";
@@ -825,6 +827,9 @@ Porek financial services and bureau dechange headquarter is located at Kerr seri
                 }, function(error) {
                     console.log("Email failed to send", error);
                 });
+                name.value = ""
+                email.value = ""
+                msg.value = ""
             }
     </script>
     <!-- modernizr js -->
